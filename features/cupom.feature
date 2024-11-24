@@ -60,3 +60,16 @@ Funcionalidade: Uso de Cupons do Checkout
     # Quando aplico esse cupom de desconto
     # Então devo ver a seguinte notificação "Cupom inválido!"
     #    E o valor final da compra deve permanecer R$ 29,99
+
+    @temp
+    # fazendo as validações de cupom invalido de outra forma
+    Esquema do Cenário: Tentativa de aplicar o desconto 
+
+    Quando aplico o seguinte cupom: "<cupom>"
+    Então devo ver a notificação "<saida>"
+        E o valor final da compra deve permanecer o mesmo
+
+    Exemplos: 
+    | cupom     |  saida           | 
+    | PROMO20   |  Cupom expirado! |
+    | PROMO100  |  Cupom inválido! |
