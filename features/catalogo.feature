@@ -31,7 +31,6 @@ Cenário: Acessar o catálogo de cafés na página principal
 #        E o valor total da compra deve ser de "R$ 19,99"
 
 
-@temp
 Cenário:  Iniciar a compra de um café - DataTable Model para 1
 
     Dado que estou na página principal da Starbugs
